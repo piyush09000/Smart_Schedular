@@ -1,0 +1,120 @@
+{
+  "indexes": [
+
+    {
+      "collectionGroup": "timetable",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "facultyCode", "order": "ASCENDING" },
+        { "fieldPath": "day",         "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "timetable",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "room", "order": "ASCENDING" },
+        { "fieldPath": "day",  "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "timetable",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "school",     "order": "ASCENDING" },
+        { "fieldPath": "department", "order": "ASCENDING" },
+        { "fieldPath": "year",       "order": "ASCENDING" },
+        { "fieldPath": "division",   "order": "ASCENDING" },
+        { "fieldPath": "day",        "order": "ASCENDING" }
+      ]
+    },
+
+    {
+      "collectionGroup": "lecture_status",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "lectureStatus", "order": "ASCENDING" },
+        { "fieldPath": "timestamp",     "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "lecture_status",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "date",          "order": "ASCENDING" },
+        { "fieldPath": "lectureStatus", "order": "ASCENDING" }
+      ]
+    },
+
+    {
+      "collectionGroup": "swap_requests",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "requestedToFacultyId", "order": "ASCENDING" },
+        { "fieldPath": "timestamp",            "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "swap_requests",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "requestedByFacultyId", "order": "ASCENDING" },
+        { "fieldPath": "timestamp",            "order": "DESCENDING" }
+      ]
+    },
+
+    {
+      "collectionGroup": "leave_requests",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status",    "order": "ASCENDING" },
+        { "fieldPath": "timestamp", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "leave_requests",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status",    "order": "ASCENDING" },
+        { "fieldPath": "facultyId", "order": "ASCENDING" }
+      ]
+    },
+
+    {
+      "collectionGroup": "notifications",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "targetId",  "order": "ASCENDING" },
+        { "fieldPath": "timestamp", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "notifications",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "targetRole", "order": "ASCENDING" },
+        { "fieldPath": "timestamp",  "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "notifications",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "targetId",  "order": "ASCENDING" },
+        { "fieldPath": "isRead",    "order": "ASCENDING" },
+        { "fieldPath": "timestamp", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "notifications",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "targetRole", "order": "ASCENDING" },
+        { "fieldPath": "isRead",     "order": "ASCENDING" },
+        { "fieldPath": "timestamp",  "order": "DESCENDING" }
+      ]
+    }
+
+  ],
+  "fieldOverrides": []
+}

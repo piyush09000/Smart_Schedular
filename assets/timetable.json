@@ -1,0 +1,1631 @@
+[
+{
+  "department": "CSE",
+  "year": "SY",
+  "division": "A",
+  "batch": "A1",
+  "day": "Monday",
+  "startTime": "01:30",
+  "endTime": "03:30",
+  "subject": "Java Programming Lab",
+  "room": "302",
+  "facultyName": "Dr. Prajakta Khadkikar",
+  "facultyCode": "PAK"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A2",
+"day": "Monday",
+"startTime": "01:30",
+"endTime": "03:30",
+"subject": "Digital Logic and Design Lab",
+"room": "Comm Lab",
+"facultyName": "Mrs. Neha Joshi",
+"facultyCode": "NJ"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A1",
+"day": "Tuesday",
+"startTime": "10:40",
+"endTime": "12:40",
+"subject": "Digital Logic and Design Lab",
+"room": "Physics Lab",
+"facultyName": "Mrs. Neha Joshi",
+"facultyCode": "NJ"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A2",
+"day": "Tuesday",
+"startTime": "10:40",
+"endTime": "12:40",
+"subject": "Java Programming Lab",
+"room": "302",
+"facultyName": "Dr. Prajakta Khadkikar",
+"facultyCode": "PAK"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A1",
+"day": "Wednesday",
+"startTime": "10:40",
+"endTime": "12:40",
+"subject": "Java Programming Lab",
+"room": "302",
+"facultyName": "Dr. Prajakta Khadkikar",
+"facultyCode": "PAK"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A2",
+"day": "Wednesday",
+"startTime": "10:40",
+"endTime": "12:40",
+"subject": "Data Structures-I Lab",
+"room": "301",
+"facultyName": "Dr. Vrushali Y Kulkarni",
+"facultyCode": "VYK"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A1",
+"day": "Wednesday",
+"startTime": "01:30",
+"endTime": "03:30",
+"subject": "Field Project",
+"room": "NL1",
+"facultyName": "—",
+"facultyCode": "—"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A2",
+"day": "Wednesday",
+"startTime": "01:30",
+"endTime": "03:30",
+"subject": "Data Storytelling and Visualization Lab",
+"room": "301",
+"facultyName": "Dr. Prachi Joshi",
+"facultyCode": "PMJ"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A1",
+"day": "Thursday",
+"startTime": "10:40",
+"endTime": "12:40",
+"subject": "Data Structures-I Lab",
+"room": "301",
+"facultyName": "Dr. Vrushali Y Kulkarni",
+"facultyCode": "VYK"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A2",
+"day": "Thursday",
+"startTime": "10:40",
+"endTime": "12:40",
+"subject": "Java Programming Lab",
+"room": "302",
+"facultyName": "Dr. Prajakta Khadkikar",
+"facultyCode": "PAK"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A1",
+"day": "Thursday",
+"startTime": "01:30",
+"endTime": "03:30",
+"subject": "Data Storytelling and Visualization Lab",
+"room": "301",
+"facultyName": "Dr. Prachi Joshi",
+"facultyCode": "PMJ"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"batch": "A2",
+"day": "Thursday",
+"startTime": "01:30",
+"endTime": "03:30",
+"subject": "Field Project",
+"room": "NL1",
+"facultyName": "—",
+"facultyCode": "—"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"day": "Monday",
+"startTime": "08:30",
+"endTime": "09:30",
+"subject": "Data Storytelling and Visualization",
+"room": "311",
+"facultyName": "Dr. Prachi Joshi",
+"facultyCode": "PMJ"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"day": "Monday",
+"startTime": "09:30",
+"endTime": "10:30",
+"subject": "Digital Logic and Design",
+"room": "311",
+"facultyName": "Mrs. Neha Joshi",
+"facultyCode": "NJ"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"day": "Monday",
+"startTime": "10:40",
+"endTime": "11:40",
+"subject": "Data Structures-I",
+"room": "311",
+"facultyName": "Dr. Vrushali Y Kulkarni",
+"facultyCode": "VYK"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"day": "Monday",
+"startTime": "11:40",
+"endTime": "12:40",
+"subject": "Java Programming",
+"room": "311",
+"facultyName": "Dr. Prajakta Khadkikar",
+"facultyCode": "PAK"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"day": "Monday",
+"startTime": "03:30",
+"endTime": "04:30",
+"subject": "Engineering Economics",
+"room": "304",
+"facultyName": "Mrs. Surekha Joshi",
+"facultyCode": "SurekhaJ"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"day": "Tuesday",
+"startTime": "08:30",
+"endTime": "09:30",
+"subject": "Environmental Sciences",
+"room": "310",
+"facultyName": "Mr. Rahul Mungikar",
+"facultyCode": "RM"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"day": "Tuesday",
+"startTime": "09:30",
+"endTime": "10:30",
+"subject": "Engineering Economics",
+"room": "310",
+"facultyName": "Mrs. Surekha Joshi",
+"facultyCode": "SurekhaJ"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"day": "Tuesday",
+"startTime": "01:30",
+"endTime": "02:30",
+"subject": "Data Structures-I",
+"room": "310",
+"facultyName": "Dr. Vrushali Y Kulkarni",
+"facultyCode": "VYK"
+},
+{
+"department": "CSE",
+"year": "SY",
+"division": "A",
+"day": "Wednesday",
+"startTime": "08:30",
+"endTime": "09:30",
+"subject": "Sports",
+"room": "—",
+"facultyName": "—",
+"facultyCode": "—"
+},
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "A",
+    "day": "Wednesday",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "subject": "Film and Appreciation",
+    "room": "305",
+    "facultyName": "Dr. Prasad Namjoshi",
+    "facultyCode": "PNJ"
+  },
+
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "A",
+    "day": "Wednesday",
+    "startTime": "03:30",
+    "endTime": "04:30",
+    "subject": "Digital Logic and Design",
+    "room": "107",
+    "facultyName": "Mrs. Neha Joshi",
+    "facultyCode": "NJ"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "A",
+    "day": "Wednesday",
+    "startTime": "03:30",
+    "endTime": "04:30",
+    "subject": "Digital Logic and Design",
+    "room": "107",
+    "facultyName": "Mrs. Neha Joshi",
+    "facultyCode": "NJ"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "A",
+    "day": "Wednesday",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "subject": "Environmental Sciences for Engineers",
+    "room": "305",
+    "facultyName": "Mr. Rahul Mungikar",
+    "facultyCode": "RM"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "A",
+    "day": "Wednesday",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "subject": "Film and Appreciation",
+    "room": "305",
+    "facultyName": "Dr. Prasad Namjoshi",
+    "facultyCode": "PNJ"
+  },
+
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Monday", "startTime": "09:30", "endTime": "11:40", "subject": "Java Programming Lab", "room": "302", "facultyName": "Dr. Prajakta Khadkikar", "facultyCode": "PAK", "batch": "B1" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Monday", "startTime": "09:30", "endTime": "11:40", "subject": "Digital Logic and Design Lab", "room": "Physics Lab", "facultyName": "Mrs. Neha Joshi", "facultyCode": "NJ", "batch": "B2" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Monday", "startTime": "11:40", "endTime": "12:40", "subject": "Java", "room": "303", "facultyName": "Dr. Vaibhav Khatavkar", "facultyCode": "VKK" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Monday", "startTime": "01:30", "endTime": "02:30", "subject": "Data Structures-I", "room": "304", "facultyName": "Dr. Vrushali Y Kulkarni", "facultyCode": "VYK" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Monday", "startTime": "02:30", "endTime": "04:30", "subject": "Data Storytelling and Visualization Lab", "room": "301", "facultyName": "Dr. Prachi Joshi", "facultyCode": "PMJ", "batch": "B1" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Monday", "startTime": "02:30", "endTime": "04:30", "subject": "Data Storytelling and Visualization Lab", "room": "308", "facultyName": "AI", "facultyCode": "AI", "batch": "B2" },
+
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Tuesday", "startTime": "09:30", "endTime": "10:30", "subject": "Environmental Sciences", "room": "303", "facultyName": "Mr. Rahul Mungikar", "facultyCode": "RM" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Tuesday", "startTime": "10:40", "endTime": "11:40", "subject": "Engineering Economics", "room": "303", "facultyName": "Mrs. Surekha Joshi", "facultyCode": "SurekhaJ" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Tuesday", "startTime": "11:40", "endTime": "12:40", "subject": "Sports", "room": "", "facultyName": "-", "facultyCode": "-" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Tuesday", "startTime": "01:30", "endTime": "03:30", "subject": "Digital Logic and Design Lab", "room": "Physics Lab", "facultyName": "Mrs. Neha Joshi", "facultyCode": "NJ", "batch": "B1" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Tuesday", "startTime": "01:30", "endTime": "03:30", "subject": "Java Programming Lab", "room": "302", "facultyName": "Dr. Vaibhav Khatavkar", "facultyCode": "VKK", "batch": "B2" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Tuesday", "startTime": "03:30", "endTime": "04:30", "subject": "Data Structures-I", "room": "303", "facultyName": "Dr. Vrushali Y Kulkarni", "facultyCode": "VYK" },
+
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Wednesday", "startTime": "08:30", "endTime": "10:30", "subject": "Data Structures-I Lab", "room": "308", "facultyName": "SM", "facultyCode": "SM", "batch": "B1" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Wednesday", "startTime": "08:30", "endTime": "10:30", "subject": "Java Programming Lab", "room": "302", "facultyName": "Dr. Vaibhav Khatavkar", "facultyCode": "VKK", "batch": "B2" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Wednesday", "startTime": "10:40", "endTime": "11:40", "subject": "Environmental Sciences", "room": "311", "facultyName": "Mr. Rahul Mungikar", "facultyCode": "RM" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Wednesday", "startTime": "11:40", "endTime": "12:40", "subject": "Data Storytelling and Visualization", "room": "311", "facultyName": "Dr. Prachi Joshi", "facultyCode": "PMJ" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Wednesday", "startTime": "01:30", "endTime": "02:30", "subject": "Digital Logic and Design", "room": "303", "facultyName": "Mrs. Neha Joshi", "facultyCode": "NJ" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Wednesday", "startTime": "02:30", "endTime": "03:30", "subject": "Film and Appreciation", "room": "303", "facultyName": "Dr. Prasad Namjoshi", "facultyCode": "PN" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Wednesday", "startTime": "03:30", "endTime": "04:30", "subject": "Film and Appreciation", "room": "303", "facultyName": "Dr. Prasad Namjoshi", "facultyCode": "PN" },
+
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Thursday", "startTime": "08:30", "endTime": "10:30", "subject": "Field Project Lab", "room": "303", "facultyName": "", "facultyCode": "", "batch": "B1" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Thursday", "startTime": "08:30", "endTime": "10:30", "subject": "Field Project Lab", "room": "310", "facultyName": "", "facultyCode": "", "batch": "B2" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Thursday", "startTime": "10:40", "endTime": "11:40", "subject": "Digital Logic and Design", "room": "304", "facultyName": "Mrs. Neha Joshi", "facultyCode": "NJ" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Thursday", "startTime": "11:40", "endTime": "12:40", "subject": "Engineering Economics", "room": "303", "facultyName": "Mrs. Surekha Joshi", "facultyCode": "SurekhaJ" },
+    { "department": "CSE", "year": "SY", "division": "B", "day": "Thursday", "startTime": "01:30", "endTime": "03:30", "subject": "Java Programming Lab", "room": "302", "facultyName": "Dr. Prajakta Khadkikar", "facultyCode": "PAK"},
+
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C2",
+    "day": "Monday",
+    "startTime": "09:30",
+    "endTime": "11:30",
+    "subject": "Field Project",
+    "room": "308",
+    "facultyName": "—",
+    "facultyCode": "—"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C1",
+    "day": "Monday",
+    "startTime": "09:30",
+    "endTime": "11:30",
+    "subject": "Data Structures-I Lab",
+    "room": "308",
+    "facultyName": "Mrs. Sharayu Mirasdar",
+    "facultyCode": "SM"
+  },
+
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Monday",
+    "startTime": "10:40",
+    "endTime": "11:40",
+    "subject": "Digital Logic and Design",
+    "room": "305",
+    "facultyName": "Dr. Trupti Pawase",
+    "facultyCode": "TP"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Monday",
+    "startTime": "01:30",
+    "endTime": "02:30",
+    "subject": "Java",
+    "room": "305",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },{
+  "department": "CSE",
+  "year": "SY",
+  "division": "C",
+  "day": "Monday",
+  "startTime": "02:30",
+  "endTime": "03:30",
+  "subject": "Engineering Economics",
+  "room": "305",
+  "facultyName": "Mrs. Surekha Joshi",
+  "facultyCode": "SurekhaJ"
+},
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Monday",
+    "startTime": "03:30",
+    "endTime": "04:30",
+    "subject": "Environmental Sciences for Engineers",
+    "room": "305",
+    "facultyName": "Mr. Rahul Mungikar",
+    "facultyCode": "RM"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C1",
+    "day": "Tuesday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Java Lab",
+    "room": "Software Lab",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C2",
+    "day": "Tuesday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Digital Logic and Design Lab",
+    "room": "Physics Lab",
+    "facultyName": "Dr. Trupti Pawase",
+    "facultyCode": "TP"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Tuesday",
+    "startTime": "10:40",
+    "endTime": "11:40",
+    "subject": "Environmental Sciences for Engineers",
+    "room": "311",
+    "facultyName": "Mr. Rahul Mungikar",
+    "facultyCode": "RM"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C1",
+    "day": "Tuesday",
+    "startTime": "01:30",
+    "endTime": "03:30",
+    "subject": "Data Storytelling and Visualization Lab",
+    "room": "IoT Lab",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C2",
+    "day": "Tuesday",
+    "startTime": "01:30",
+    "endTime": "03:30",
+    "subject": "Data Structures-I Lab",
+    "room": "308",
+    "facultyName": "Mrs. Sharayu Mirasdar",
+    "facultyCode": "SM"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Tuesday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Sports",
+    "room": "—",
+    "facultyName": "—",
+    "facultyCode": "—"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C1",
+    "day": "Wednesday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Digital Logic and Design Lab",
+    "room": "Physics Lab",
+    "facultyName": "Dr. Trupti Pawase",
+    "facultyCode": "TP"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C2",
+    "day": "Wednesday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Java Lab",
+    "room": "Software Lab",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Wednesday",
+    "startTime": "10:40",
+    "endTime": "11:40",
+    "subject": "Digital Logic and Design",
+    "room": "305",
+    "facultyName": "Dr. Trupti Pawase",
+    "facultyCode": "TP"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Wednesday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Data Structures-I",
+    "room": "305",
+    "facultyName": "Mrs. Sharayu Mirasdar",
+    "facultyCode": "SM"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C1",
+    "day": "Wednesday",
+    "startTime": "01:30",
+    "endTime": "03:30",
+    "subject": "Java Lab",
+    "room": "302",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C2",
+    "day": "Wednesday",
+    "startTime": "01:30",
+    "endTime": "03:30",
+    "subject": "Data Storytelling and Visualization Lab",
+    "room": "IoT Lab",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Thursday",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "subject": "Data Storytelling and Visualization",
+    "room": "107",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Thursday",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "subject": "Data Structures-I",
+    "room": "107",
+    "facultyName": "Mrs. Sharayu Mirasdar",
+    "facultyCode": "SM"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C1",
+    "day": "Thursday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Java Lab",
+    "room": "308",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "batch": "C1",
+    "day": "Thursday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Java Lab",
+    "room": "308",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Thursday",
+    "startTime": "01:30",
+    "endTime": "02:30",
+    "subject": "Engineering Economics",
+    "room": "310",
+    "facultyName": "Mrs. Surekha Joshi",
+    "facultyCode": "SurekhaJ"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Thursday",
+    "startTime": "02:30",
+    "endTime": "03:30",
+    "subject": "Film and Appreciation",
+    "room": "310",
+    "facultyName": "Dr. Prasad Namjoshi",
+    "facultyCode": "PN"
+  },
+  {
+    "department": "CSE",
+    "year": "SY",
+    "division": "C",
+    "day": "Thursday",
+    "startTime": "03:30",
+    "endTime": "04:30",
+    "subject": "Film and Appreciation",
+    "room": "310",
+    "facultyName": "Dr. Prasad Namjoshi",
+    "facultyCode": "PN"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Monday",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "subject": "Web Technology",
+    "room": "305",
+    "facultyName": "Dr. Rupali Chopade",
+    "facultyCode": "RC"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Monday",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "subject": "Elective-I Digital Image Processing",
+    "room": "310",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Monday",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "subject": "Elective-I Internet of Things",
+    "room": "305",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "Sub-1",
+    "day": "Monday",
+    "startTime": "10:40",
+    "endTime": "12:40",
+    "subject": "Elective-I Digital Image Processing Lab",
+    "room": "PrL",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "Sub-2",
+    "day": "Monday",
+    "startTime": "10:40",
+    "endTime": "12:40",
+    "subject": "Elective-I Internet of Things Lab",
+    "room": "IoT Lab",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Monday",
+    "startTime": "01:30",
+    "endTime": "02:30",
+    "subject": "Organizational Psychology",
+    "room": "311",
+    "facultyName": "Mr. Abhijit Khurpe",
+    "facultyCode": "AK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Monday",
+    "startTime": "02:30",
+    "endTime": "03:30",
+    "subject": "Computer Networks",
+    "room": "311",
+    "facultyName": "Dr. Lalit Kulkarni",
+    "facultyCode": "LK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Monday",
+    "startTime": "03:30",
+    "endTime": "04:30",
+    "subject": "Design and Analysis of Algorithms",
+    "room": "311",
+    "facultyName": "Mrs. Sharayu Mirasdar",
+    "facultyCode": "SM"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A1",
+    "day": "Tuesday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Computer Networks Lab",
+    "room": "301",
+    "facultyName": "Dr. Lalit Kulkarni",
+    "facultyCode": "LK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A2",
+    "day": "Tuesday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Design and Analysis of Algorithms Lab",
+    "room": "302",
+    "facultyName": "Mrs. Sharayu Mirasdar",
+    "facultyCode": "SM"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Tuesday",
+    "startTime": "10:40",
+    "endTime": "11:40",
+    "subject": "Design and Analysis of Algorithms",
+    "room": "310",
+    "facultyName": "Mrs. Sharayu Mirasdar",
+    "facultyCode": "SM"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Tuesday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Elective-I Digital Image Processing",
+    "room": "310",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Tuesday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Elective-I Internet of Things",
+    "room": "305",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A1",
+    "day": "Tuesday",
+    "startTime": "01:30",
+    "endTime": "03:30",
+    "subject": "Artificial Intelligence Lab",
+    "room": "301",
+    "facultyName": "Dr. Vaishali Kamble",
+    "facultyCode": "VHK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A2",
+    "day": "Tuesday",
+    "startTime": "01:30",
+    "endTime": "03:30",
+    "subject": "Web Technology Lab",
+    "room": "Software Lab",
+    "facultyName": "Dr. Rupali Chopade",
+    "facultyCode": "RC"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Tuesday",
+    "startTime": "03:30",
+    "endTime": "04:30",
+    "subject": "Operating System",
+    "room": "310",
+    "facultyName": "Dr. Prajakta Khadkikar",
+    "facultyCode": "PAK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "Sub-1",
+    "day": "Wednesday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Elective-I Digital Image Processing Lab",
+    "room": "PrL",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "Sub-2",
+    "day": "Wednesday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Elective-I Internet of Things Lab",
+    "room": "IoT Lab",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A1",
+    "day": "Wednesday",
+    "startTime": "10:40",
+    "endTime": "12:40",
+    "subject": "Web Technology Lab",
+    "room": "Software Lab",
+    "facultyName": "Dr. Rupali Chopade",
+    "facultyCode": "RC"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A2",
+    "day": "Wednesday",
+    "startTime": "10:40",
+    "endTime": "12:40",
+    "subject": "Artificial Intelligence Lab",
+    "room": "IoT Lab",
+    "facultyName": "Dr. Vaishali Kamble",
+    "facultyCode": "VHK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Wednesday",
+    "startTime": "01:30",
+    "endTime": "02:30",
+    "subject": "Computer Networks",
+    "room": "311",
+    "facultyName": "Dr. Lalit Kulkarni",
+    "facultyCode": "LK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Wednesday",
+    "startTime": "02:30",
+    "endTime": "03:30",
+    "subject": "Artificial Intelligence",
+    "room": "311",
+    "facultyName": "Dr. Vaishali Kamble",
+    "facultyCode": "VHK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Wednesday",
+    "startTime": "03:30",
+    "endTime": "04:30",
+    "subject": "Training and Placement",
+    "room": "311",
+    "facultyName": "—",
+    "facultyCode": "—"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A2",
+    "day": "Thursday",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "subject": "Organizational Psychology Tutorial",
+    "room": "311",
+    "facultyName": "Mr. Abhijit Khurpe",
+    "facultyCode": "AK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Thursday",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "subject": "Web Technology",
+    "room": "311",
+    "facultyName": "Dr. Rupali Chopade",
+    "facultyCode": "RC"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A1",
+    "day": "Thursday",
+    "startTime": "10:40",
+    "endTime": "12:40",
+    "subject": "Design and Analysis of Algorithms Lab",
+    "room": "IoT Lab",
+    "facultyName": "Mrs. Sharayu Mirasdar",
+    "facultyCode": "SM"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A2",
+    "day": "Thursday",
+    "startTime": "10:40",
+    "endTime": "12:40",
+    "subject": "Web Technology Lab",
+    "room": "Software Lab",
+    "facultyName": "Dr. Rupali Chopade",
+    "facultyCode": "RC"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Thursday",
+    "startTime": "01:30",
+    "endTime": "02:30",
+    "subject": "Artificial Intelligence",
+    "room": "311",
+    "facultyName": "Dr. Vaishali Kamble",
+    "facultyCode": "VHK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A1",
+    "day": "Thursday",
+    "startTime": "02:30",
+    "endTime": "04:30",
+    "subject": "Web Technology Lab",
+    "room": "Software Lab",
+    "facultyName": "Dr. Rupali Chopade",
+    "facultyCode": "RC"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A2",
+    "day": "Thursday",
+    "startTime": "02:30",
+    "endTime": "04:30",
+    "subject": "Operating System Lab",
+    "room": "NL1",
+    "facultyName": "Dr. Wasudev Rahane",
+    "facultyCode": "WR"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A1",
+    "day": "Friday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Operating System Lab",
+    "room": "PrL",
+    "facultyName": "Dr. Wasudev Rahane",
+    "facultyCode": "WR"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A2",
+    "day": "Friday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Computer Networks Lab",
+    "room": "301",
+    "facultyName": "Dr. Lalit Kulkarni",
+    "facultyCode": "LK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Friday",
+    "startTime": "10:40",
+    "endTime": "11:40",
+    "subject": "Operating System",
+    "room": "311",
+    "facultyName": "Dr. Prajakta Khadkikar",
+    "facultyCode": "PAK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "batch": "A1",
+    "day": "Friday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Organizational Psychology Tutorial",
+    "room": "311",
+    "facultyName": "Mr. Abhijit Khurpe",
+    "facultyCode": "AK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "A",
+    "day": "Friday",
+    "startTime": "12:40",
+    "endTime": "01:30",
+    "subject": "Sports",
+    "room": "—",
+    "facultyName": "—",
+    "facultyCode": "—"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Monday",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "subject": "Web Technology",
+    "room": "310",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Monday",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "subject": "Elective-I Digital Image Processing",
+    "room": "310",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Monday",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "subject": "Elective-I Internet of Things",
+    "room": "305",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B1",
+    "day": "Monday",
+    "startTime": "10:40",
+    "endTime": "12:40",
+    "subject": "Web Technology Lab",
+    "room": "301",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B2",
+    "day": "Monday",
+    "startTime": "10:40",
+    "endTime": "12:40",
+    "subject": "Computer Networks Lab",
+    "room": "Software Lab",
+    "facultyName": "Dr. Pallavi Mulmule",
+    "facultyCode": "PM"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B1",
+    "day": "Monday",
+    "startTime": "01:30",
+    "endTime": "03:30",
+    "subject": "Design and Analysis of Algorithms Lab",
+    "room": "PrL",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B2",
+    "day": "Monday",
+    "startTime": "01:30",
+    "endTime": "03:30",
+    "subject": "Artificial Intelligence Lab",
+    "room": "IoT Lab",
+    "facultyName": "Dr. Vaishali Kamble",
+    "facultyCode": "VHK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "Sub-1",
+    "day": "Tuesday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Elective-I Digital Image Processing Lab",
+    "room": "PrL",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "Sub-2",
+    "day": "Tuesday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Elective-I Internet of Things Lab",
+    "room": "IoT Lab",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Tuesday",
+    "startTime": "10:40",
+    "endTime": "11:40",
+    "subject": "Computer Networks",
+    "room": "305",
+    "facultyName": "Dr. Pallavi Mulmule",
+    "facultyCode": "PM"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Tuesday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Elective-I Digital Image Processing",
+    "room": "310",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Tuesday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Elective-I Internet of Things",
+    "room": "305",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Tuesday",
+    "startTime": "01:30",
+    "endTime": "02:30",
+    "subject": "Operating System",
+    "room": "311",
+    "facultyName": "Dr. Prajakta Khadkikar",
+    "facultyCode": "PAK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B2",
+    "day": "Tuesday",
+    "startTime": "02:30",
+    "endTime": "03:30",
+    "subject": "Web Technology Lab",
+    "room": "PrL",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B2",
+    "day": "Wednesday",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "subject": "Organizational Psychology Tutorial",
+    "room": "307",
+    "facultyName": "Mr. Abhijit Khurpe",
+    "facultyCode": "AK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Wednesday",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "subject": "Artificial Intelligence",
+    "room": "310",
+    "facultyName": "Dr. Vaishali Kamble",
+    "facultyCode": "VHK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Wednesday",
+    "startTime": "10:40",
+    "endTime": "11:40",
+    "subject": "Design and Analysis of Algorithms",
+    "room": "310",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Wednesday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Training and Placement",
+    "room": "—",
+    "facultyName": "—",
+    "facultyCode": "—"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B1",
+    "day": "Wednesday",
+    "startTime": "01:30",
+    "endTime": "02:30",
+    "subject": "Computer Networks Lab",
+    "room": "308",
+    "facultyName": "Dr. Pallavi Mulmule",
+    "facultyCode": "PM"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B2",
+    "day": "Wednesday",
+    "startTime": "01:30",
+    "endTime": "02:30",
+    "subject": "Design and Analysis of Algorithms Lab",
+    "room": "PrL",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B1",
+    "day": "Wednesday",
+    "startTime": "02:30",
+    "endTime": "03:30",
+    "subject": "Operating System Lab",
+    "room": "NL1",
+    "facultyName": "Dr. Wasudev Rahane",
+    "facultyCode": "WR"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B1",
+    "day": "Thursday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Web Technology Lab",
+    "room": "IoT Lab",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B2",
+    "day": "Thursday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Operating System Lab",
+    "room": "PrL",
+    "facultyName": "Dr. Wasudev Rahane",
+    "facultyCode": "WR"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Thursday",
+    "startTime": "10:40",
+    "endTime": "11:40",
+    "subject": "Design and Analysis of Algorithms",
+    "room": "305",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Thursday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Organizational Psychology",
+    "room": "305",
+    "facultyName": "Mr. Abhijit Khurpe",
+    "facultyCode": "AK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "Sub-1",
+    "day": "Thursday",
+    "startTime": "01:30",
+    "endTime": "03:30",
+    "subject": "Elective-I Digital Image Processing Lab",
+    "room": "PrL",
+    "facultyName": "Dr. Swati Jaiswal",
+    "facultyCode": "SJ"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "Sub-2",
+    "day": "Thursday",
+    "startTime": "01:30",
+    "endTime": "03:30",
+    "subject": "Elective-I Internet of Things Lab",
+    "room": "IoT Lab",
+    "facultyName": "Mr. Aniket Ingavale",
+    "facultyCode": "AI"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B1",
+    "day": "Friday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Artificial Intelligence Lab",
+    "room": "IoT Lab",
+    "facultyName": "Dr. Vaishali Kamble",
+    "facultyCode": "VHK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B2",
+    "day": "Friday",
+    "startTime": "08:30",
+    "endTime": "10:30",
+    "subject": "Web Technology",
+    "room": "302",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Friday",
+    "startTime": "10:40",
+    "endTime": "11:40",
+    "subject": "Artificial Intelligence",
+    "room": "310",
+    "facultyName": "Dr. Vaishali Kamble",
+    "facultyCode": "VHK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Friday",
+    "startTime": "11:40",
+    "endTime": "12:40",
+    "subject": "Web Technology",
+    "room": "310",
+    "facultyName": "Dr. Shrida Kalamkar",
+    "facultyCode": "SK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Friday",
+    "startTime": "01:30",
+    "endTime": "02:30",
+    "subject": "Operating System",
+    "room": "310",
+    "facultyName": "Dr. Prajakta Khadkikar",
+    "facultyCode": "PAK"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "day": "Friday",
+    "startTime": "02:30",
+    "endTime": "03:30",
+    "subject": "Computer Networks",
+    "room": "310",
+    "facultyName": "Dr. Pallavi Mulmule",
+    "facultyCode": "PM"
+  },
+  {
+    "department": "CSE",
+    "year": "TY",
+    "division": "B",
+    "batch": "B1",
+    "day": "Friday",
+    "startTime": "03:30",
+    "endTime": "04:30",
+    "subject": "Organizational Psychology Tutorial",
+    "room": "307",
+    "facultyName": "Mr. Abhijit Khurpe",
+    "facultyCode": "AK"
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+
+
+
+
+

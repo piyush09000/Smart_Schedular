@@ -1,0 +1,113 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ─────────────────────────────────────────────
+    // SCHOOLS & DEPARTMENTS — Public read, no client writes
+    // ─────────────────────────────────────────────
+    match /schools/{document=**} {
+      allow read: if true;
+      allow write: if false; // Backend/Admin SDK only
+    }
+
+    match /departments/{document=**} {
+      allow read: if true;
+      allow write: if true;  // Written during Excel upload
+    }
+
+    // ─────────────────────────────────────────────
+    // USERS — Read allowed; only fcmToken field can be updated by the app
+    // ─────────────────────────────────────────────
+    match /users/{userId} {
+      allow read: if true;
+      allow create: if true;  // Admin can add users via Excel upload
+      allow update: if request.resource.data.diff(resource.data)
+                      .affectedKeys()
+                      .hasOnly(['fcmToken']);
+      allow delete: if false;
+    }
+
+    // ─────────────────────────────────────────────
+    // TIMETABLE — Read by all; write by authenticated roles (Admin)
+    // ─────────────────────────────────────────────
+    match /timetable/{docId} {
+      allow read: if true;
+      allow write: if true; // Admin upload via app; restrict further with Auth roles
+    }
+
+    // ─────────────────────────────────────────────
+    // ROOMS & ROOM_STATUS — Public read; app can update status
+    // ─────────────────────────────────────────────
+    match /rooms/{roomId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /room_status/{roomId} {
+      allow read: if true;
+      allow write: if true; // Updated during lecture booking/freeing
+    }
+
+    // ─────────────────────────────────────────────
+    // LECTURE STATUS — Core source of truth; all authenticated
+    // ─────────────────────────────────────────────
+    match /lecture_status/{statusId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // ─────────────────────────────────────────────
+    // ATTENDANCE — Faculty marks their own; read by all
+    // ─────────────────────────────────────────────
+    match /attendance/{docId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+      allow delete: if false; // Attendance records are immutable once set
+    }
+
+    // ─────────────────────────────────────────────
+    // SWAP REQUESTS — Faculty creates; Admin/HOS updates status
+    // ─────────────────────────────────────────────
+    match /swap_requests/{requestId} {
+      allow read: if true;
+      allow create: if true;  // Any faculty can open a swap request
+      allow update: if true;  // Status updated by admin/HOS/target faculty
+      allow delete: if false;
+    }
+
+    // ─────────────────────────────────────────────
+    // SWAP HISTORY — Read-only audit log
+    // ─────────────────────────────────────────────
+    match /swap_history/{docId} {
+      allow read: if true;
+      allow write: if false; // Written exclusively by SwapService via transaction
+    }
+
+    // ─────────────────────────────────────────────
+    // LEAVE REQUESTS — Faculty creates; Admin/HOS approves/rejects
+    // ─────────────────────────────────────────────
+    match /leave_requests/{requestId} {
+      allow read: if true;
+      allow create: if true;  // Any faculty can apply for leave
+      allow update: if true;  // Status updated by admin/HOS
+      allow delete: if false;
+    }
+
+    // ─────────────────────────────────────────────
+    // NOTIFICATIONS — Services write; all users read their own
+    // ─────────────────────────────────────────────
+    match /notifications/{notifId} {
+      allow read: if true;
+      allow create: if true;  // Written by NotificationService
+      allow update: if
+        // Only allow marking as read
+        request.resource.data.diff(resource.data)
+          .affectedKeys()
+          .hasOnly(['isRead']);
+      allow delete: if false;
+    }
+
+  }
+}
