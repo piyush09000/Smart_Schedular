@@ -95,72 +95,76 @@ class _LeaveApplicationScreenState extends State<LeaveApplicationScreen> {
         backgroundColor: const Color(0xFF1E40AF),
         foregroundColor: Colors.white,
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Card(
-              elevation: 4,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Form(
-                  key: _formKey,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text("Apply for Leave", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                      const SizedBox(height: 16),
-                      ListTile(
-                        shape: RoundedRectangleBorder(
-                          side: const BorderSide(color: Colors.grey),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        leading: const Icon(Icons.date_range),
-                        title: Text(_startDate == null 
-                          ? "Select Date Range" 
-                          : "${_startDate!.toIso8601String().split('T')[0]} to ${_endDate!.toIso8601String().split('T')[0]}"),
-                        onTap: () => _selectDateRange(context),
-                      ),
-                      const SizedBox(height: 16),
-                      TextFormField(
-                        controller: _reasonController,
-                        decoration: const InputDecoration(
-                          labelText: "Reason for Leave",
-                          border: OutlineInputBorder(),
-                        ),
-                        maxLines: 2,
-                        validator: (v) => v!.isEmpty ? "Required" : null,
-                      ),
-                      const SizedBox(height: 16),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: _isSubmitting ? null : _submitRequest,
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF1E40AF),
-                            foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(vertical: 12),
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Card(
+                elevation: 4,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text("Apply for Leave", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                        const SizedBox(height: 16),
+                        ListTile(
+                          shape: RoundedRectangleBorder(
+                            side: const BorderSide(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(8),
                           ),
-                          child: _isSubmitting 
-                              ? const CircularProgressIndicator(color: Colors.white)
-                              : const Text("Submit Application"),
+                          leading: const Icon(Icons.date_range),
+                          title: Text(_startDate == null 
+                            ? "Select Date Range" 
+                            : "${_startDate!.toIso8601String().split('T')[0]} to ${_endDate!.toIso8601String().split('T')[0]}"),
+                          onTap: () => _selectDateRange(context),
                         ),
-                      )
-                    ],
+                        const SizedBox(height: 16),
+                        TextFormField(
+                          controller: _reasonController,
+                          decoration: const InputDecoration(
+                            labelText: "Reason for Leave",
+                            border: OutlineInputBorder(),
+                          ),
+                          maxLines: 2,
+                          validator: (v) => v!.isEmpty ? "Required" : null,
+                        ),
+                        const SizedBox(height: 16),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            onPressed: _isSubmitting ? null : _submitRequest,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF1E40AF),
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(vertical: 12),
+                            ),
+                            child: _isSubmitting 
+                                ? const CircularProgressIndicator(color: Colors.white)
+                                : const Text("Submit Application"),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
           ),
-          const Divider(),
-          const Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text("Your Leave History", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+          const SliverToBoxAdapter(child: Divider()),
+          const SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Your Leave History", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              ),
             ),
           ),
-          Expanded(
+          SliverFillRemaining(
             child: StreamBuilder<QuerySnapshot>(
               stream: FirebaseFirestore.instance
                   .collection('leave_requests')

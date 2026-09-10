@@ -9,6 +9,7 @@ import '../screens/edit_lecture_dialog.dart';
 
 class DayTimetableWidget extends StatelessWidget {
   final String day;
+  final String targetDate;
   final String mode;
   final String code;
   final DatabaseService database;
@@ -16,6 +17,7 @@ class DayTimetableWidget extends StatelessWidget {
   const DayTimetableWidget({
     super.key,
     required this.day,
+    required this.targetDate,
     required this.mode,
     required this.code,
     required this.database,
@@ -79,6 +81,7 @@ class DayTimetableWidget extends StatelessWidget {
     if (mode != "FACULTY") return;
 
     String todayDate = DateTime.now().toIso8601String().split('T')[0];
+    bool isPastDate = targetDate.compareTo(todayDate) < 0;
 
     showModalBottomSheet(
       context: context,
@@ -87,9 +90,10 @@ class DayTimetableWidget extends StatelessWidget {
       ),
       builder: (ctx) {
         return SafeArea(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
               ListTile(
                 leading: const Icon(Icons.check_circle_outline, color: Colors.green),
                 title: const Text("Update Lecture Status"),
@@ -111,24 +115,27 @@ class DayTimetableWidget extends StatelessWidget {
                   }
                 },
               ),
-              ListTile(
-                leading: const Icon(Icons.swap_horiz, color: Colors.blue),
-                title: const Text("Request Swap"),
-                subtitle: const Text("Exchange this lecture with another faculty"),
-                onTap: () {
-                  Navigator.pop(ctx);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => CreateSwapScreen(
-                        myLecture: lecture,
-                        database: database,
+              if (!isPastDate)
+                ListTile(
+                  leading: const Icon(Icons.swap_horiz, color: Colors.blue),
+                  title: const Text("Request Swap"),
+                  subtitle: const Text("Exchange this lecture with another faculty"),
+                  onTap: () {
+                    Navigator.pop(ctx);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => CreateSwapScreen(
+                          myLecture: lecture,
+                          targetDate: targetDate,
+                          database: database,
+                        ),
                       ),
-                    ),
-                  );
-                },
-              ),
-            ],
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         );
       },
@@ -140,7 +147,7 @@ class DayTimetableWidget extends StatelessWidget {
     Future<List<TimetableModel>> future;
 
     if (mode == "FACULTY") {
-      future = database.getFacultyTimetable(code);
+      future = database.getFacultyTimetable(code, targetDate: targetDate);
     } else {
       List parts = code.split("-");
       future = database.getCourseClassTimetable(
@@ -148,6 +155,7 @@ class DayTimetableWidget extends StatelessWidget {
         parts[1],
         parts[2],
         parts[3],
+        targetDate: targetDate,
       );
     }
 

@@ -29,9 +29,9 @@ class DatabaseService {
   }
 
   /// FACULTY VIEW
-  Future<List<TimetableModel>> getFacultyTimetable(String code, {bool forceRefresh = false}) async {
+  Future<List<TimetableModel>> getFacultyTimetable(String code, {bool forceRefresh = false, String? targetDate}) async {
     final prefs = await SharedPreferences.getInstance();
-    final cacheKey = 'faculty_timetable_$code';
+    final cacheKey = 'faculty_timetable_$code${targetDate != null ? "_$targetDate" : ""}';
     final cacheTimeKey = '${cacheKey}_time';
 
     if (!forceRefresh) {
@@ -51,15 +51,94 @@ class DatabaseService {
         .where("facultyCode", isEqualTo: code)
         .get();
 
-    final result = snapshot.docs.map((doc) {
+    List<TimetableModel> result = snapshot.docs.map((doc) {
       return TimetableModel.fromJson(doc.data() as Map<String, dynamic>, doc.id);
     }).toList();
+
+    // Apply Overrides
+    if (targetDate != null) {
+       QuerySnapshot overridesSnapshot = await db.collection('lecture_overrides').where('date', isEqualTo: targetDate).get();
+       
+       List<String> addedTimetableIds = [];
+       Map<String, Map<String, dynamic>> overrideMap = {};
+
+       for (var doc in overridesSnapshot.docs) {
+          var o = doc.data() as Map<String, dynamic>;
+          overrideMap[o['timetableId']] = o;
+          if (o['newFacultyCode'] == code) {
+             addedTimetableIds.add(o['timetableId']);
+          }
+       }
+
+       if (addedTimetableIds.isNotEmpty) {
+          for (String tid in addedTimetableIds) {
+             var tDoc = await db.collection("timetable").doc(tid).get();
+             if (tDoc.exists) {
+                // Ensure we don't duplicate if it was somehow already in baseList
+                if (!result.any((e) => e.docId == tid)) {
+                   result.add(TimetableModel.fromJson(tDoc.data() as Map<String, dynamic>, tDoc.id));
+                }
+             }
+          }
+       }
+
+        for (var i = result.length - 1; i >= 0; i--) {
+          var r = result[i];
+          if (r.docId != null && overrideMap.containsKey(r.docId)) {
+             var o = overrideMap[r.docId]!;
+             r.facultyCode = o['newFacultyCode'] ?? r.facultyCode;
+             r.facultyName = o['newFacultyName'] ?? r.facultyName;
+             r.room = o['newRoom'] ?? r.room;
+
+             if (r.facultyCode != code) {
+                result.removeAt(i);
+             }
+          }
+       }
+
+       // FETCH MANUAL BOOKINGS
+       QuerySnapshot manualBookingsSnapshot = await db
+           .collection('lecture_status')
+           .where('facultyId', isEqualTo: code)
+           .where('date', isEqualTo: targetDate)
+           .where('type', isEqualTo: 'Manual Booking')
+           .get();
+
+       for (var doc in manualBookingsSnapshot.docs) {
+          var data = doc.data() as Map<String, dynamic>;
+          String timeSlot = data['timeSlot'] ?? "00:00 - 00:00";
+          var parts = timeSlot.split(" - ");
+          
+          DateTime dateObj = DateTime.parse(targetDate);
+          List<String> weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+          String dayName = weekdays[dateObj.weekday - 1];
+
+          result.add(
+            TimetableModel(
+              docId: doc.id,
+              school: '',
+              department: data['department'] ?? '',
+              year: data['year'] ?? '',
+              division: data['division'] ?? '',
+              day: dayName,
+              startTime: parts.isNotEmpty ? parts[0] : "",
+              endTime: parts.length > 1 ? parts[1] : "",
+              subject: data['subject'] ?? 'Manual Booking',
+              room: data['room'] ?? '',
+              facultyName: data['facultyName'] ?? '',
+              facultyCode: data['facultyId'] ?? '',
+            )
+          );
+       }
+    }
+
+    // Sort by startTime
+    result.sort((a, b) => a.startTime.compareTo(b.startTime));
 
     // Save to cache
     await prefs.setString(cacheKey, jsonEncode(result.map((e) {
       var map = e.toJson();
       map['docId'] = e.docId;
-      // Convert timestamps to string if any (though TimetableModel might not have raw Timestamp objects in toJson if handled properly)
       return map;
     }).toList()));
     await prefs.setInt(cacheTimeKey, DateTime.now().millisecondsSinceEpoch);
@@ -69,10 +148,10 @@ class DatabaseService {
 
   /// CLASS TIMETABLE
   Future<List<TimetableModel>> getCourseClassTimetable(
-      String school, String dept, String year, String div, {bool forceRefresh = false}) async {
+      String school, String dept, String year, String div, {bool forceRefresh = false, String? targetDate}) async {
 
     final prefs = await SharedPreferences.getInstance();
-    final cacheKey = 'class_timetable_${school}_${dept}_${year}_$div';
+    final cacheKey = 'class_timetable_${school}_${dept}_${year}_$div${targetDate != null ? "_$targetDate" : ""}';
     final cacheTimeKey = '${cacheKey}_time';
 
     if (!forceRefresh) {
@@ -101,6 +180,66 @@ class DatabaseService {
     final result = snapshot.docs.map((doc) {
       return TimetableModel.fromJson(doc.data() as Map<String, dynamic>, doc.id);
     }).toList();
+
+    // Apply Overrides
+    if (targetDate != null) {
+       QuerySnapshot overridesSnapshot = await db.collection('lecture_overrides').where('date', isEqualTo: targetDate).get();
+       Map<String, Map<String, dynamic>> overrideMap = {};
+       for (var doc in overridesSnapshot.docs) {
+          var o = doc.data() as Map<String, dynamic>;
+          overrideMap[o['timetableId']] = o;
+       }
+       for (var r in result) {
+          if (r.docId != null && overrideMap.containsKey(r.docId)) {
+             var o = overrideMap[r.docId]!;
+             r.facultyCode = o['newFacultyCode'] ?? r.facultyCode;
+             r.facultyName = o['newFacultyName'] ?? r.facultyName;
+             r.room = o['newRoom'] ?? r.room;
+          }
+       }
+    }
+
+    // FETCH MANUAL BOOKINGS
+    if (targetDate != null) {
+       QuerySnapshot manualBookingsSnapshot = await db
+           .collection('lecture_status')
+           .where('department', isEqualTo: dept)
+           .where('year', isEqualTo: year)
+           .where('division', isEqualTo: div)
+           .where('date', isEqualTo: targetDate)
+           .where('type', isEqualTo: 'Manual Booking')
+           .get();
+
+       for (var doc in manualBookingsSnapshot.docs) {
+          var data = doc.data() as Map<String, dynamic>;
+          String timeSlot = data['timeSlot'] ?? "00:00 - 00:00";
+          var parts = timeSlot.split(" - ");
+          
+          DateTime dateObj = DateTime.parse(targetDate);
+          List<String> weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+          String dayName = weekdays[dateObj.weekday - 1];
+
+          result.add(
+            TimetableModel(
+              docId: doc.id,
+              school: schoolId,
+              department: dept,
+              year: year,
+              division: div,
+              day: dayName,
+              startTime: parts.isNotEmpty ? parts[0] : "",
+              endTime: parts.length > 1 ? parts[1] : "",
+              subject: data['subject'] ?? 'Manual Booking',
+              room: data['room'] ?? '',
+              facultyName: data['facultyName'] ?? '',
+              facultyCode: data['facultyId'] ?? '',
+            )
+          );
+       }
+    }
+
+    // Sort by startTime
+    result.sort((a, b) => a.startTime.compareTo(b.startTime));
 
     // Save to cache
     await prefs.setString(cacheKey, jsonEncode(result.map((e) {

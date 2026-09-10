@@ -104,15 +104,21 @@ class SwapService {
           throw Exception("The faculty for these lectures has changed since the request was made.");
         }
 
-        // 3. Swap them! A takes B's place, B takes A's place.
-        transaction.update(lectureARef, {
-          'facultyCode': request.requestedToFacultyId,
-          'facultyName': request.requestedToFacultyName,
+        // 3. Create Overrides for the target date
+        transaction.set(db.collection('lecture_overrides').doc(), {
+          'date': request.targetDate,
+          'timetableId': request.currentLectureId,
+          'newFacultyCode': request.requestedToFacultyId,
+          'newFacultyName': request.requestedToFacultyName,
+          'type': 'Swap',
         });
 
-        transaction.update(lectureBRef, {
-          'facultyCode': request.requestedByFacultyId,
-          'facultyName': request.requestedByFacultyName,
+        transaction.set(db.collection('lecture_overrides').doc(), {
+          'date': request.targetDate,
+          'timetableId': request.requestedLectureId,
+          'newFacultyCode': request.requestedByFacultyId,
+          'newFacultyName': request.requestedByFacultyName,
+          'type': 'Swap',
         });
 
         // 4. Update the Swap Request Status

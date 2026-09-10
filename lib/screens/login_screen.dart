@@ -8,6 +8,7 @@ import 'faculty_dashboard.dart';
 import 'vc_dashboard.dart';
 import 'hos_dashboard.dart';
 import '../services/database_service.dart';
+import '../utils/ui_utils.dart';
 
 class LoginScreen extends StatefulWidget {
   final DatabaseService database;
@@ -65,6 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setBool("isLoggedIn", true);
       await prefs.setString("userCode", user);
+      await prefs.setString("userName", data["name"] ?? user);
       await prefs.setString("role", role);
       await prefs.setString("school", data["school"] ?? ""); // ✅ FIXED
 
@@ -79,6 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       /// ✅ NAVIGATION
       if (role == "admin") {
+        showAttractiveNotification(context, "Welcome back, Admin!");
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -86,6 +89,8 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         );
       } else if (role == "faculty") {
+        String facultyName = data["name"] ?? "Faculty";
+        showAttractiveNotification(context, "Welcome back, $facultyName!");
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -96,6 +101,8 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         );
       } else if (role == "hos") {
+        String name = data["name"] ?? "HOS";
+        showAttractiveNotification(context, "Welcome back, $name!");
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -106,6 +113,8 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         );
       } else if (role == "vc") {
+        String name = data["name"] ?? "VC";
+        showAttractiveNotification(context, "Welcome back, $name!");
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(

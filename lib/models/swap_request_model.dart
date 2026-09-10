@@ -22,6 +22,7 @@ class SwapRequestModel {
   String requestedLectureClass;
 
   String reason;
+  String targetDate; // YYYY-MM-DD
   String status; // Pending, Accepted, Rejected, Cancelled
   Timestamp? timestamp;
 
@@ -42,6 +43,7 @@ class SwapRequestModel {
     required this.requestedLectureRoom,
     required this.requestedLectureClass,
     required this.reason,
+    required this.targetDate,
     required this.status,
     this.timestamp,
   });
@@ -64,6 +66,7 @@ class SwapRequestModel {
       requestedLectureRoom: json['requestedLectureRoom'] ?? '',
       requestedLectureClass: json['requestedLectureClass'] ?? '',
       reason: json['reason'] ?? '',
+      targetDate: json['targetDate'] ?? '',
       status: json['status'] ?? 'Pending',
       timestamp: json['timestamp'],
     );
@@ -86,6 +89,7 @@ class SwapRequestModel {
       'requestedLectureRoom': requestedLectureRoom,
       'requestedLectureClass': requestedLectureClass,
       'reason': reason,
+      'targetDate': targetDate,
       'status': status,
       'timestamp': FieldValue.serverTimestamp(),
     };

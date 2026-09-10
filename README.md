@@ -1,4 +1,4 @@
-# 📅 Timetable Management System
+# 📅 Smart Scheduler and Management System
 
 A robust, hierarchical, and scalable **Timetable Management System** built for Universities/Colleges. It provides role-based access for different levels of faculty and students, allowing seamless scheduling, room allocation, and timetable viewing.
 
@@ -54,19 +54,30 @@ The system relies on a **Dynamic Hierarchical Structure** to map data accurately
 
 ## 🛠️ Setup & Operations
 
-### 1. Running the App
+### 1. Prerequisites
+- Flutter SDK (latest version)
+- Node.js (for backend administration scripts)
+- A Firebase project with Firestore and Authentication enabled
+
+### 2. Firebase Configuration
+Before running the application, you must link it to your own Firebase project:
+1. Generate `google-services.json` from your Firebase Console for the Android app and place it in `android/app/google-services.json`.
+2. Generate `GoogleService-Info.plist` for the iOS app and place it in `ios/Runner/GoogleService-Info.plist` (if building for iOS).
+3. Generate a Firebase Service Account Key from your Firebase Console and save it as `serviceAccountKey.json` inside the `backend/` directory.
+
+### 3. Running the App
 ```bash
 flutter pub get
 flutter run
 ```
 
-### 2. Resetting the Database (Fresh Slate)
+### 4. Resetting the Database (Fresh Slate)
 If you ever need to completely wipe the database (all users, timetables, and nested hierarchies) and start fresh:
-1. Ensure your `serviceAccountKey.json` is placed inside the `backend/` folder.
+1. Ensure your `serviceAccountKey.json` is correctly placed inside the `backend/` folder.
 2. Run the Node.js reset script:
 ```bash
 cd backend
-npm install firebase-admin
+npm install
 node reset_and_seed.js
 ```
 This initializes default schools, admin user, and basic rooms. From there, log into the Flutter app as `admin` to upload your timetable Excel files!

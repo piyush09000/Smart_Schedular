@@ -50,9 +50,14 @@ service cloud.firestore {
     }
 
     // ─────────────────────────────────────────────
-    // LECTURE STATUS — Core source of truth; all authenticated
+    // LECTURE STATUS & OVERRIDES
     // ─────────────────────────────────────────────
     match /lecture_status/{statusId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /lecture_overrides/{overrideId} {
       allow read: if true;
       allow write: if true;
     }
@@ -82,7 +87,7 @@ service cloud.firestore {
     // ─────────────────────────────────────────────
     match /swap_history/{docId} {
       allow read: if true;
-      allow write: if false; // Written exclusively by SwapService via transaction
+      allow write: if true; // Written by SwapService transaction
     }
 
     // ─────────────────────────────────────────────
@@ -106,7 +111,7 @@ service cloud.firestore {
         request.resource.data.diff(resource.data)
           .affectedKeys()
           .hasOnly(['isRead']);
-      allow delete: if false;
+      allow delete: if true; // Allow deleting notifications from inbox
     }
 
   }

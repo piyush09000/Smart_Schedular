@@ -5,6 +5,7 @@ import '../services/database_service.dart';
 import 'leave_approvals_screen.dart';
 import 'substitute_management_screen.dart';
 import 'notifications_screen.dart';
+import 'admin_swap_requests_screen.dart';
 
 class HOSDashboard extends StatefulWidget {
   final String school;
@@ -150,10 +151,13 @@ class _HOSDashboardState extends State<HOSDashboard> {
 
                       if (departments.isNotEmpty)
                         DropdownButtonFormField(
+                          isExpanded: true,
                           value: departments.containsKey(department) ? department : null,
                           items: departments.entries.map((entry) {
                             return DropdownMenuItem(
-                                value: entry.key, child: Text(entry.value));
+                                value: entry.key, 
+                                child: Text(entry.value, overflow: TextOverflow.ellipsis),
+                            );
                           }).toList(),
                           onChanged: (value) async {
                             department = value as String;
@@ -302,6 +306,23 @@ class _HOSDashboardState extends State<HOSDashboard> {
                           minimumSize: const Size(double.infinity, 45),
                         ),
                         child: const Text("Substitute Management"),
+                      ),
+                      const SizedBox(height: 10),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const AdminSwapRequestsScreen(scope: "HOS"),
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          foregroundColor: Colors.white,
+                          minimumSize: const Size(double.infinity, 45),
+                        ),
+                        child: const Text("View Swap History"),
                       ),
                     ],
                   ),

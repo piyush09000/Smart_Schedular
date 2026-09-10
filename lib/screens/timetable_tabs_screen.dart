@@ -9,6 +9,7 @@ import 'notifications_screen.dart';
 import 'room_availability_screen.dart';
 import 'swap_requests_screen.dart';
 import 'leave_application_screen.dart';
+import '../utils/ui_utils.dart';
 
 class TimetableTabsScreen extends StatefulWidget {
   final String mode;
@@ -31,43 +32,17 @@ class _TimetableTabsScreenState extends State<TimetableTabsScreen>
 
   late TabController controller;
   String _facultyName = "";
-
-  final List<String> days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  int getTodayIndex() {
-    int weekday = DateTime.now().weekday;
-    switch (weekday) {
-      case 1:
-        return 0;
-      case 2:
-        return 1;
-      case 3:
-        return 2;
-      case 4:
-        return 3;
-      case 5:
-        return 4;
-      case 6:
-        return 5;
-      default:
-        return 0;
-    }
-  }
+  late List<DateTime> dates;
 
   @override
   void initState() {
     super.initState();
+    // Generate dates from 3 days ago to 10 days in the future
+    dates = List.generate(14, (i) => DateTime.now().subtract(const Duration(days: 3)).add(Duration(days: i)));
     controller = TabController(
-      length: days.length,
+      length: dates.length,
       vsync: this,
-      initialIndex: getTodayIndex(),
+      initialIndex: 3, // Today is at index 3
     );
     _loadFacultyName();
   }
@@ -90,6 +65,9 @@ class _TimetableTabsScreenState extends State<TimetableTabsScreen>
     await prefs.clear();
 
     if (!mounted) return;
+    
+    showAttractiveNotification(context, "Thank you for using!");
+    
     Navigator.pushAndRemoveUntil(
       context,
       MaterialPageRoute(
@@ -114,33 +92,7 @@ class _TimetableTabsScreenState extends State<TimetableTabsScreen>
 
         actions: [
           if (widget.mode == "FACULTY") ...[
-            IconButton(
-              icon: const Icon(Icons.beach_access),
-              tooltip: "Leave Application",
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => LeaveApplicationScreen(
-                      facultyCode: widget.code,
-                      facultyName: _facultyName,
-                    ),
-                  ),
-                );
-              },
-            ),
-            IconButton(
-              icon: const Icon(Icons.inbox),
-              tooltip: "Swap Requests",
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => SwapRequestsScreen(facultyCode: widget.code),
-                  ),
-                );
-              },
-            ),
+            // Leave and Swap buttons moved to BottomNavigationBar
           ],
           IconButton(
             icon: const Icon(Icons.meeting_room),
@@ -181,15 +133,23 @@ class _TimetableTabsScreenState extends State<TimetableTabsScreen>
           indicatorColor: const Color(0xFF1E40AF),
           labelColor: const Color(0xFF1E40AF),
           unselectedLabelColor: const Color(0xFF6B7280),
-          tabs: days.map((d) => Tab(text: d)).toList(),
+          tabs: dates.map((d) {
+             String dayStr = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][d.weekday - 1];
+             String dateStr = "${d.day}/${d.month}";
+             return Tab(text: "$dayStr $dateStr");
+          }).toList(),
         ),
       ),
 
       body: TabBarView(
         controller: controller,
-        children: days.map((day) {
+        children: dates.map((date) {
+          String fullDayName = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"][date.weekday - 1];
+          String targetDate = date.toIso8601String().split('T')[0];
+
           return DayTimetableWidget(
-            day: day,
+            day: fullDayName,
+            targetDate: targetDate,
             mode: widget.mode,
             code: widget.code,
             database: widget.database,

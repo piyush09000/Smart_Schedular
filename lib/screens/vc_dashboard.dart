@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'timetable_tabs_screen.dart';
+import 'admin_swap_requests_screen.dart';
 import '../services/database_service.dart';
 
 class VCDashboard extends StatefulWidget {
@@ -273,6 +274,25 @@ class _VCDashboardState extends State<VCDashboard> {
                     foregroundColor: Colors.white, // ✅ FIX HERE
                   ),
                   child: const Text("View Timetable"),
+                ),
+                
+                const SizedBox(height: 12),
+                
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const AdminSwapRequestsScreen(scope: "VC"),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(double.infinity, 45),
+                    backgroundColor: Colors.orange,
+                    foregroundColor: Colors.white,
+                  ),
+                  child: const Text("View Swap History"),
                 ),
 
               ],

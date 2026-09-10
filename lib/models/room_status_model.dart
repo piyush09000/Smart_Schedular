@@ -4,6 +4,7 @@ class RoomStatusModel {
   String? id; // Room name e.g., "101"
   String status; // Available, Occupied, Reserved, Maintenance
   String currentFacultyName;
+  String currentFacultyCode;
   String currentSubject;
   String currentDivision;
   String currentTimeSlot;
@@ -13,9 +14,11 @@ class RoomStatusModel {
     this.id,
     required this.status,
     this.currentFacultyName = '',
+    this.currentFacultyCode = '',
     this.currentSubject = '',
     this.currentDivision = '',
     this.currentTimeSlot = '',
+
     this.lastUpdated,
   });
 
@@ -24,6 +27,7 @@ class RoomStatusModel {
       id: docId,
       status: json['status'] ?? 'Available',
       currentFacultyName: json['currentFacultyName'] ?? '',
+      currentFacultyCode: json['currentFacultyCode'] ?? '',
       currentSubject: json['currentSubject'] ?? '',
       currentDivision: json['currentDivision'] ?? '',
       currentTimeSlot: json['currentTimeSlot'] ?? '',
@@ -35,6 +39,7 @@ class RoomStatusModel {
     return {
       'status': status,
       'currentFacultyName': currentFacultyName,
+      'currentFacultyCode': currentFacultyCode,
       'currentSubject': currentSubject,
       'currentDivision': currentDivision,
       'currentTimeSlot': currentTimeSlot,

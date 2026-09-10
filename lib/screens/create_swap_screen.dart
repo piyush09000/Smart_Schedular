@@ -6,11 +6,13 @@ import '../services/swap_service.dart';
 
 class CreateSwapScreen extends StatefulWidget {
   final TimetableModel myLecture;
+  final String targetDate;
   final DatabaseService database;
 
   const CreateSwapScreen({
     super.key,
     required this.myLecture,
+    required this.targetDate,
     required this.database,
   });
 
@@ -60,7 +62,10 @@ class _CreateSwapScreenState extends State<CreateSwapScreen> {
     });
 
     try {
-      var lectures = await widget.database.getFacultyTimetable(facultyId);
+      var lectures = await widget.database.getFacultyTimetable(facultyId, targetDate: widget.targetDate);
+      // Filter lectures to only those happening on the same day of the week
+      lectures = lectures.where((l) => l.day == widget.myLecture.day).toList();
+
       setState(() {
         _targetLectures = lectures;
         _isLoading = false;
@@ -99,6 +104,7 @@ class _CreateSwapScreenState extends State<CreateSwapScreen> {
         requestedLectureClass: "${_selectedTargetLecture!.department}-${_selectedTargetLecture!.year}-${_selectedTargetLecture!.division}",
         
         reason: _reasonController.text.trim(),
+        targetDate: widget.targetDate,
         status: 'Pending',
       );
 
@@ -172,6 +178,8 @@ class _CreateSwapScreenState extends State<CreateSwapScreen> {
                   if (_isLoading)
                     const Center(child: CircularProgressIndicator())
                   else if (_targetLectures.isNotEmpty) ...[
+                    Text("Target Date: ${widget.targetDate}", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.blue)),
+                    const SizedBox(height: 20),
                     const Text("Select Target Lecture:", style: TextStyle(fontWeight: FontWeight.bold)),
                     ..._targetLectures.map((lec) {
                       return RadioListTile<TimetableModel>(

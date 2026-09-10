@@ -79,7 +79,15 @@ class _SwapRequestsScreenState extends State<SwapRequestsScreen> with SingleTick
                       ],
                     ),
                     const Divider(),
-                    const Text("Exchange:", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue)),
+                    Row(
+                      children: [
+                        const Icon(Icons.calendar_today, size: 14, color: Colors.blue),
+                        const SizedBox(width: 4),
+                        Text("Target Date: ${req.targetDate}", style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.blue)),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    const Text("Exchange:", style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 4),
                     Text("Takes: ${req.currentLectureSubject} (${req.currentLectureTime})"),
                     Text("Gives: ${req.requestedLectureSubject} (${req.requestedLectureTime})"),
